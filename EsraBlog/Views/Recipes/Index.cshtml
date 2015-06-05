@@ -1,0 +1,33 @@
+﻿@model IEnumerable<EsraBlog.Models.AdminPost>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Recipes</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td><b>
+    @Html.DisplayFor(modelItem => item.Title)
+        </b></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+        </td>
+    </tr>
+}
+
+</table>

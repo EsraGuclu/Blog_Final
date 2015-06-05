@@ -1,0 +1,32 @@
+﻿@model EsraBlog.Models.AdminPost
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <b>
+        <i>
+            @Html.DisplayFor(model => model.Title)
+        </i>
+    </b>
+    <br /><br /><br />
+    <p align="left">
+        <i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            @Html.DisplayFor(model => model.Content)
+        </i>
+    </p>
+        <br /><br />
+        <i><b>
+            @Html.DisplayFor(model => model.Author)
+    </b></i>
+        @Html.DisplayFor(model => model.Date)
+
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
